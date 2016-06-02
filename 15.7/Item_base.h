@@ -23,6 +23,10 @@ public:
 		system("pause");
 	};
 	friend ostream &operator << (ostream &, Item_base &);
+
+	//Add clone function at base class
+	virtual Item_base* clone()const;
+
 private:
 	string isbn;
 protected:

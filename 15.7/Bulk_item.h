@@ -21,6 +21,10 @@ public:
 		cout << "Using Bulk_item's destructor." << endl;
 		system("pause");
 	}
+	// overload clone function
+	Bulk_item *clone() const {
+		return new Bulk_item(*this);
+	}
 private:
 	size_t min_qty;
 	double  discount;

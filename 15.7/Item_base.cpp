@@ -9,3 +9,8 @@ ostream & operator<<(ostream &os, Item_base &ib)
 		<< ib.net_price(3) << endl;
 	return os;
 }
+
+Item_base * Item_base::clone() const
+{
+	return new Item_base(*this);
+}
